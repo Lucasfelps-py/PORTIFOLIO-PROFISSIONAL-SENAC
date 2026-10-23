@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Portfólio profissional de Lucas, estudante de TI no Senac.">
+
+    <meta name="theme-color" content="#0b1020">
+
+    <title>Lucas | Portfólio de Tecnologia</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+    <header class="header" id="topo">
+        <nav class="navbar container" aria-label="Navegação principal">
+
+            <a class="logo" href="#inicio" aria-label="Lucas, página inicial">
+                Lucas<span>.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-controls="nav-links"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">início</a></li>
+                <li><a href="#sobre">sobre mim</a></li>
+                <li><a href="#habilidades">habilidades</a></li>
+                <li><a href="#projetos">projetos</a></li>
+                <li><a href="#contato">contato</a></li>
+            </ul>
+
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                aria-label="Ativar modo claro">
+                <span id="theme-icon" aria-hidden="true">☀</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- INÍCIO -->
+        <section class="hero section container" id="inicio">
+
+            <div class="hero-content">
+                <!-- SAUDAÇÃO FIXA -->
+                <p class="eyebrow" id="saudacao">
+                    Olá! Seja bem-vindo.
+                </p>
+
+                <h1>
+                    Meu nome é Lucas.
+                    <span>Estou construindo meu futuro na tecnologia.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Sou estudante do curso técnico de TI do Senac e estou
+                    desenvolvendo minhas habilidades para transformar ideias
+                    em soluções digitais.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projetos">
+                        Conheça meus projetos
+                    </a>
+
+                    <a class="button button-secondary" href="#sobre">
+                        Sobre mim
+                    </a>
+                </div>
+
+                <p class="availability">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Em formação e aberto a oportunidades de estágio
+                </p>
+            </div>
+
+            <div class="hero-visual" style="display: flex; flex-direction: column; align-items: center;">
+                <!-- FOTO DA PRAIA NO CÍRCULO -->
+                <div class="avatar" style="width: 320px; height: 320px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 4px solid rgba(255, 255, 255, 0.2); margin: 0 auto;">
+                    <img src="img/foto-praia.jpeg" alt="Foto de perfil de Lucas na praia" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%; transform: scale(1.0); display: block;">
+                </div>
+
+                <div class="floating-card" style="position: relative; margin-top: 35px; transform: none; top: auto; left: auto;">
+                    <span class="code-symbol" aria-hidden="true">&lt;/&gt;</span>
+                    <div>
+                        <strong>Lucas</strong>
+                        <p>Estudante de TI</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section class="section section-alt" id="sobre">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">Conheça minha trajetória</p>
+                    <h2>Sobre mim</h2>
+                    <p>
+                        Um pouco sobre quem sou e onde quero chegar.
+                    </p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Aprendendo hoje para criar soluções amanhã.</h3>
+
+                        <p>
+                            Meu nome é Lucas e sou estudante do curso técnico
+                            de Tecnologia da Informação do Senac. Estou
+                            construindo minha base profissional por meio
+                            dos estudos, da prática e do desenvolvimento
+                            de projetos.
+                        </p>
+
+                        <p>
+                            Meu objetivo é aprofundar meus conhecimentos,
+                            desenvolver projetos cada vez melhores e conquistar
+                            uma oportunidade de estágio para aplicar o que
+                            aprendo e ganhar experiência na área de tecnologia.
+                        </p>
+
+                        <p>
+                            Acredito que a evolução profissional depende
+                            de curiosidade, disciplina, prática e disposição
+                            para aprender continuamente.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="info-item">
+                            <span class="info-label">Formação</span>
+                            <strong>Curso técnico de TI</strong>
+                            <p>Senac · Em andamento</p>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Foco atual</span>
+                            <strong>Desenvolvimento web & Banco de Dados</strong>
+                            <p>Python, HTML, CSS, JS e SQLite</p>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Objetivo</span>
+                            <strong>Primeira oportunidade</strong>
+                            <p>Estágio na área de tecnologia</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="section container" id="habilidades">
+
+            <div class="section-heading">
+                <p class="eyebrow">Conhecimentos em desenvolvimento</p>
+                <h2>Minhas habilidades</h2>
+                <p>
+                    Tecnologias que estou estudando e praticando.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">Py</span>
+                    <h3>Python</h3>
+                    <p>
+                        Lógica de programação, scripts e desenvolvimento de sistemas backend.
+                    </p>
+                    <span class="skill-level">Em aprendizado</span>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">SQL</span>
+                    <h3>SQLite / SQL</h3>
+                    <p>
+                        Criação de tabelas, consultas e gerenciamento de bancos de dados relacionais.
+                    </p>
+                    <span class="skill-level">Em aprendizado</span>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">WEB</span>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>
+                        Estruturação e estilização de páginas web responsivas e acessíveis.
+                    </p>
+                    <span class="skill-level">Em aprendizado</span>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon" aria-hidden="true">G</span>
+                    <h3>Git e GitHub</h3>
+                    <p>
+                        Controle de versão e versionamento de repositórios de código.
+                    </p>
+                    <span class="skill-level">Praticando</span>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="section section-alt" id="projetos">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">Prática e evolução</p>
+                    <h2>Meus projetos</h2>
+                    <p>
+                        Projetos reais que demonstram meus conhecimentos e evolução técnica.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJETO 01: BARBEARIA -->
+                    <article class="project-card">
+                        <div class="project-number">PROJETO 01</div>
+
+                        <div class="project-content">
+                            <h3>Projeto Barbearia</h3>
+
+                            <p>
+                                Página web estilizada e responsiva desenvolvida para apresentação de serviços de barbearia.
+                            </p>
+
+                            <ul class="tag-list" aria-label="Tecnologias do projeto">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Web Design</li>
+                            </ul>
+
+                            <a href="https://github.com/Lucasfelps-py/Projeto-barbearia" target="_blank" rel="noopener noreferrer" class="button button-small" style="margin-top: 15px; display: inline-block; padding: 8px 16px; background: #facc15; color: #0b1020; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 02: ACADEMIA -->
+                    <article class="project-card">
+                        <div class="project-number">PROJETO 02</div>
+
+                        <div class="project-content">
+                            <h3>Academia Site</h3>
+
+                            <p>
+                                Site institucional voltado para o segmento fitness, destacando planos, horários e modalidade de treinos.
+                            </p>
+
+                            <ul class="tag-list" aria-label="Tecnologias do projeto">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Responsivo</li>
+                            </ul>
+
+                            <a href="https://github.com/Lucasfelps-py/Academia-site" target="_blank" rel="noopener noreferrer" class="button button-small" style="margin-top: 15px; display: inline-block; padding: 8px 16px; background: #facc15; color: #0b1020; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 03: CAFETERIA -->
+                    <article class="project-card">
+                        <div class="project-number">PROJETO 03</div>
+
+                        <div class="project-content">
+                            <h3>Cafeteria</h3>
+
+                            <p>
+                                Projeto web focado em interface acolhedora e moderna para apresentação de cardápio e ambiente de cafeteria.
+                            </p>
+
+                            <ul class="tag-list" aria-label="Tecnologias do projeto">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>UI Design</li>
+                            </ul>
+
+                            <a href="https://github.com/Lucasfelps-py/Cafeteria" target="_blank" rel="noopener noreferrer" class="button button-small" style="margin-top: 15px; display: inline-block; padding: 8px 16px; background: #facc15; color: #0b1020; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- CONTAINER DO PERFIL DO GITHUB EM DESTAQUE -->
+                <div style="margin-top: 40px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+                    <h3 style="color: #fff; font-size: 1.3rem; margin: 0;">Confira mais projetos no meu GitHub!</h3>
+                    <p style="color: #9ca3af; margin: 0; max-width: 500px;">
+                        Acompanhe meus repositórios públicos, estudos do Senac e evolução diária no desenvolvimento.
+                    </p>
+                    <a href="https://github.com/Lucasfelps-py" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; background: #22c55e; color: #fff; font-weight: bold; text-decoration: none; border-radius: 8px; transition: 0.2s;">
+                        <span>github.com/Lucasfelps-py</span> ↗
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section container" id="contato">
+
+            <div class="section-heading">
+                <p class="eyebrow">Vamos conversar</p>
+                <h2>Entre em contato</h2>
+                <p>
+                    Conecte-se comigo através dos meus canais oficiais.
+                </p>
+            </div>
+
+            <div class="contact-layout" style="display: flex; gap: 20px; align-items: stretch;">
+
+                <div class="contact-card-predefined" style="flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 160px; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="margin-bottom: 15px; font-weight: bold; font-size: 1.25rem; color: #fff;">Meus Contatos</h3>
+                    <p style="margin-bottom: 10px; color: #d1d5db;">
+                        <strong>Telefone / WhatsApp:</strong> 
+                        <a href="tel:84986378266" style="color: #facc15; text-decoration: none;">(84) 98637-8266</a>
+                    </p>
+                    <p style="color: #d1d5db; margin: 0;">
+                        <strong>E-mail:</strong> 
+                        <a href="mailto:Lucasfelipe130809@gmail.com" style="color: #facc15; text-decoration: none;">Lucasfelipe130809@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="contact-card-predefined" style="flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 160px; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="margin-bottom: 15px; font-weight: bold; font-size: 1.25rem; color: #fff;">Mensagem em destaque</h3>
+                    <p style="font-style: italic; font-size: 1.1rem; color: #d1d5db; margin: 0;">
+                        "Com grandes códigos vem grandes dores de cabeça."
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <p>
+                Desenvolvido por <strong>Lucas</strong>.
+            </p>
+
+            <p>
+                <span id="current-year"></span> · Portfólio pessoal
+            </p>
+
+            <a class="back-to-top" href="#inicio" id="btn-topo">
+                Voltar ao topo ↑
+            </a>
+
+        </div>
+    </footer>
+
+</body> 
+</html>
