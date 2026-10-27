@@ -90,60 +90,92 @@ atualizarBotaoTema("dark");
 
 currentYear.textContent = new Date().getFullYear();
 
-// 6. Validar o formulário de contato
+// 6. Validar o formulário de contato (Verifica se o formulário existe na página)
 
-contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    const nome = document.querySelector("#nome").value.trim();
-    const email = document.querySelector("#email").value.trim();
-    const mensagem = document.querySelector("#mensagem").value.trim();
-    const consentimento = document.querySelector("#consentimento").checked;
+        const nome = document.querySelector("#nome").value.trim();
+        const email = document.querySelector("#email").value.trim();
+        const mensagem = document.querySelector("#mensagem").value.trim();
+        const consentimento = document.querySelector("#consentimento").checked;
 
-    // Verificar se os campos contêm informações válidas
+        // Verificar se os campos contêm informações válidas
 
-    if (nome.length < 2) {
+        if (nome.length < 2) {
+            formFeedback.textContent =
+                "Digite um nome com pelo menos 2 caracteres.";
+            return;
+        }
+
+        if (!email || !contactForm.elements.email.validity.valid) {
+            formFeedback.textContent =
+                "Digite um endereço de e-mail válido.";
+            return;
+        }
+
+        if (mensagem.length < 10) {
+            formFeedback.textContent =
+                "A mensagem precisa ter pelo menos 10 caracteres.";
+            return;
+        }
+
+        if (!consentimento) {
+            formFeedback.textContent =
+                "É necessário concordar com o uso dos dados para continuar.";
+            return;
+        }
+
+        // Demonstração: os dados não são enviados para um servidor
+
         formFeedback.textContent =
-            "Digite um nome com pelo menos 2 caracteres.";
-        return;
-    }
+            "Validação concluída! Este formulário ainda não envia mensagens. " +
+            "Nenhum dado foi transmitido.";
 
-    if (!email || !contactForm.elements.email.validity.valid) {
-        formFeedback.textContent =
-            "Digite um endereço de e-mail válido.";
-        return;
-    }
-
-    if (mensagem.length < 10) {
-        formFeedback.textContent =
-            "A mensagem precisa ter pelo menos 10 caracteres.";
-        return;
-    }
-
-    if (!consentimento) {
-        formFeedback.textContent =
-            "É necessário concordar com o uso dos dados para continuar.";
-        return;
-    }
-
-    // Demonstração: os dados não são enviados para um servidor
-
-    formFeedback.textContent =
-        "Validação concluída! Este formulário ainda não envia mensagens. " +
-        "Nenhum dado foi transmitido.";
-
-    contactForm.reset();
-});
-
-// 7. Rolagem suave para o botão "Voltar ao topo"
-const btnTopo = document.getElementById('btn-topo');
-
-if (btnTopo) {
-    btnTopo.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        contactForm.reset();
     });
 }
+
+// 7. Rolagem suave customizada e fluida para todos os links internos
+
+const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+internalLinks.forEach((link) => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            e.preventDefault();
+            
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 90;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 700; 
+            let startTime = null;
+
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            }
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+
+            requestAnimationFrame(animation);
+        }
+    });
+});
